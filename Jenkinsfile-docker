@@ -34,8 +34,8 @@ pipeline {
     stage('Tag Container Image') {
       agent { label 'controller' }
       steps {
-        sh 'docker image tag myllo:v1 roundlifemin/myhello:v$BUILD_NUMBER' // Tagging with build number
-        sh 'docker image tag myllo:v1 roundlifemin/myhello:latest' // Tagging with latest
+        sh 'docker image tag myhello:v1 roundlifemin/myhello:v$BUILD_NUMBER' // Tagging with build number
+        sh 'docker image tag myhello:v1 roundlifemin/myhello:latest' // Tagging with latest
       }
     }
     stage('Push Container Image') {
