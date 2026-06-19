@@ -1,8 +1,7 @@
 pipeline {
   agent {
-     label "jenkins-node"
-  }
-
+    label "jenkins-node"
+  }   
 
   triggers {
     pollSCM('* * * * *')
@@ -32,4 +31,5 @@ pipeline {
     }
   }
 }
+
 
